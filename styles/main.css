@@ -1,0 +1,14 @@
+*{
+    background-color: rgb(255, 255, 255);
+}
+main{
+    text-align: center;
+}
+
+.games{
+    padding: 5px;
+    margin: 10px;
+}
+.games-list{
+    display: flex;
+}
