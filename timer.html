@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Timer</title>
+    <link rel="stylesheet" href="styles/timer.css">
 </head>
+    <script src="scripts/timer.js" type="module"></script>
 <body>
-    <main><h1>TIMER PAGE</h1></main>
+    <main>
+    <h1>WELCOME TO THE TIMER GAME</h1>
+    <p>You can use this timer for your board games with you family and friends, please set a time to continue.</p>
+    
+    <div> 
+    <h1 id="countdown">⏱️</h1>
+    <input type="number" id="timeLeft" placeholder="Select a Number to start the countdown">
+    <button id="startButton">Start</button>
+    </div>
+</main>
 </body>
 </html>
