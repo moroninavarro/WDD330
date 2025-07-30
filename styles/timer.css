@@ -1,7 +1,9 @@
 body{
     text-align: center;
 }
-
+p{
+    font-size: 20px;
+}
 div{
     padding: 10px;
     margin: 10rem;
@@ -9,15 +11,19 @@ div{
 
 input{
     padding: 10px;
-    width: 300px;
+    width: 450px;
+    font-size: 2rem;
 }
 
 button{
     padding: 10px;
-    width: 100px;
+    width: 200px;
     text-align: center;
+    font-size: 2rem;
 }
-
+button:hover{
+    background-color:rgb(143, 141, 141);
+}
 #countdown{
     font-size: 7rem;
     
