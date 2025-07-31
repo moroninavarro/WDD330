@@ -3,11 +3,14 @@
 }
 main{
     text-align: center;
+    
 }
 
 .games{
+    display: flex;
     padding: 5px;
     margin: 10px;
+    justify-content: center;
 }
 .games-list{
     display: flex;

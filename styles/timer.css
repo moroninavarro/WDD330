@@ -1,6 +1,13 @@
 body{
     text-align: center;
 }
+
+header{
+    display: flex;
+    justify-content: left;
+    margin: 10px;
+    padding: 10px;
+}
 p{
     font-size: 20px;
 }
