@@ -6,24 +6,27 @@
     <title>Timer</title>
     <link rel="stylesheet" href="styles/timer.css">
 </head>
-    <script src="scripts/timer.js" type="module"></script>
 
+<body>
     <header>
         <a href="index.html">
             <button>Menu</button>
         </a>
     </header>
-<body>
     <main>
-
-    <h1>WELCOME TO THE TIMER GAME</h1>
-    <p>You can use this timer for your board games with your family and friends, please set a time to continue.</p>
-    <div> 
-    <h1 id="countdown">⏱️</h1>
-    <input type="number" id="timeLeft" placeholder="Set a Number">
-    <button id="startButton">Start</button>
-    </div>
+        <h2>WELCOME TO THE TIMER GAME</h2>
+        <p>You can use this timer for your board games with your family and friends, please set a time to continue.</p>
+        
+        <div class="theTime"> 
+            <h1 id="countdown">⏱️</h1>
+            <div class="logicTimer"> 
+                <input type="number" id="timeLeft" placeholder="Set a Number">
+                <button id="startButton">Start</button>
+            </div>
+        </div>
+    </main>
     
-</main>
+    <footer id="main-footer"></footer>
+    <script src="scripts/timer.js" type="module"></script>
 </body>
 </html>
