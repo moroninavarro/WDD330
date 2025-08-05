@@ -6,13 +6,45 @@
     <title>Timer-Chess</title>
     <link rel="stylesheet" href="styles/timer-chess.css">
 </head>
-<header>
-        <a href="index.html">
-            <button>Menu</button>
-        </a>
-    </header>
 <body>
-    <main><h1>TIMER-CHESS PAGE</h1></main>
+    <header>
+            <a href="index.html">
+                <button>Menu</button>
+            </a>
+        </header>
+
+    <main>
+        <h2>WELCOME TO THE TIMER-CHESS</h2>
+        
+        <p>You can use this timer for your Chess games. Please select a time to continue.</p>
+    <div id="clock">
+       <select id="InitialTime">
+            <option value="1">1 minute</option>
+            <option value="3">2 minutes</option>
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="30">30 minutes</option>
+       </select>
+        <button id="StartBtn">Start</button>
+
+        <div class="chess-clock"> 
+            <div class="player1">
+                <h2>Whites</h2>
+                <p id="timer1">--</p>
+                <button id="btn1">Change turn</button>
+            </div>
+
+            <div class="player2">
+                <h2>Blacks</h2>
+                <p id="timer2">--</p>
+                <button id="btn2">Change turn</button>
+            </div>
+        </div>
+        
+    </div>
+    </main>
     <footer id="main-footer"></footer>
+    <script src="scripts/timer-chess.js"></script>
 </body>
 </html>

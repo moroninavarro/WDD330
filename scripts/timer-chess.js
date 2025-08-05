@@ -1,0 +1,101 @@
+const buttonStart = document.getElementById('StartBtn');
+const quoteBox = document.getElementById('quoteBox');
+const timer1Display = document.getElementById('timer1');
+const timer2Display = document.getElementById('timer2');
+const button1 = document.getElementById('btn1');
+const button2 = document.getElementById('btn2');
+const soundmp3 = new Audio('/public/sounds/switch.mp3');
+
+
+let time1 = 0;
+let time2 = 0;
+let interval1 = null;
+let interval2 = null;
+
+function updateDisplay(){
+    if (time1 > 0) {
+        document.getElementById('timer1').textContent = time1;
+    }
+
+     if (time2 > 0) {
+        document.getElementById('timer2').textContent = time2;
+    }
+}
+
+
+function stopAll(){
+    clearInterval(interval2);
+    clearInterval(interval1);
+}
+
+function startTurn1(){
+    clearInterval(timer2);
+
+    timer1 = setInterval(() => {
+    if (time1 > 0) {
+        time1--;
+        updateDisplay();
+        } else {
+            clearInterval(timer1);
+            document.getElementById('timer1').textContent = "TIME OUT";
+        }
+    
+      
+    }, 1000);
+}
+  
+
+
+function startTurn2(){
+    clearInterval(timer1);
+
+    timer2 = setInterval(() => {
+    if (time2 > 0) {
+        time2--;
+        updateDisplay();
+        } else {
+            clearInterval(timer2);
+            document.getElementById('timer2').textContent = "TIME OUT";
+        }
+    
+      
+    }, 1000);
+}
+
+buttonStart.addEventListener('click', ()=>{
+    const selectedMinutes = parseInt(document.getElementById('InitialTime').value);
+    const initialTime = selectedMinutes * 60;
+
+
+    if (isNaN(initialTime) || initialTime <=0) return;
+
+
+    time1 = initialTime;
+    time2 = initialTime;
+    updateDisplay();
+    startTurn1();
+
+    button1.classList.add('active-turn');
+    button2.classList.remove('active-turn');
+
+});
+
+
+button1.addEventListener('click', () => {
+    if (time1 > 0){
+        startTurn2();
+        button2.classList.add('active-turn');
+        button1.classList.remove('active-turn');
+        soundmp3.play();
+    }
+});
+
+button2.addEventListener('click', () => {
+    if (time2 > 0){
+        startTurn1();
+        button1.classList.add('active-turn');
+        button2.classList.remove('active-turn');
+        soundmp3.play();
+    }
+});
+
