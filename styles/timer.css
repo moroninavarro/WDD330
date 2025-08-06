@@ -42,6 +42,15 @@ input{
     
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    padding: 1em;
+    margin-top: 10rem;
+}
+
 @media screen and (max-width: 960px) {
    .logicTimer{
     display: grid;
