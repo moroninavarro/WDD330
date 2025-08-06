@@ -1,0 +1,26 @@
+*{
+    
+    
+    color: white;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+
+
+}
+body{
+    background-color: rgba(0, 0, 0, 0.801);
+}
+main{
+    text-align: center;
+    
+}
+
+button{
+    background-color: rgb(145, 148, 0);
+    padding: 10px;
+    font-size: 23px;
+}
+button:hover{
+    background-color: rgb(201, 201, 16);
+}
