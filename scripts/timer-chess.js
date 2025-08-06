@@ -13,13 +13,9 @@ let interval1 = null;
 let interval2 = null;
 
 function updateDisplay(){
-    if (time1 > 0) {
-        document.getElementById('timer1').textContent = time1;
-    }
-
-     if (time2 > 0) {
-        document.getElementById('timer2').textContent = time2;
-    }
+    document.getElementById('timer1').textContent = time1 > 0 ? formatTime(time1) : "TIME OUT";
+    document.getElementById('timer2').textContent = time2 > 0 ? formatTime(time2) : "TIME OUT";
+   
 }
 
 
@@ -43,7 +39,17 @@ function startTurn1(){
       
     }, 1000);
 }
-  
+
+
+function formatTime(seconds){
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+
+    const minsStr = mins.toString().padStart(2, '0');
+    const secsStr = secs.toString().padStart(2, '0');
+
+    return `${minsStr}:${secsStr}`;
+}
 
 
 function startTurn2(){
