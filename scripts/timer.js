@@ -41,10 +41,10 @@ async function showArt(){
         const image = obra.primaryimageurl;
 
         document.getElementById("art").innerHTML = `
-        <p> Talking about time... Do you know that in <strong>${date}</strong> the artist <em>"${artist}"</em> made this picture?</p>
+        <p> Talking about time... Do you know that in <strong>"${date}"</strong> the artist <em>"${artist}"</em> made this picture?</p>
         <h3>${title}</h3>
         
-        ${image ? `<img src="${image}" alt="${title}">` : "<p>(Sorry, there isn't a picture to show in this case)</p>"}
+        ${image ? `<img src="${image}" alt="${title}">` : "<p>(Sorry, there isn't a picture to show in this case, just the name)</p>"}
         `;
     } catch (err) {
         console.error("Error to get the obra:", err);

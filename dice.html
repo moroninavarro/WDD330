@@ -19,29 +19,65 @@
         <h2>YOU HAVE SELECTED THE DICE OPTION</h2>
         <p>You can use this dice for your board games with your family and friends.</p>
 
-        <div class="body1"> 
-            <div id="diceContainer" class="scene"></div>
-                <!-- <div class="cube" id="cube">
-                    <div class="face front">1</div>
-                    <div class="face back">2</div>
-                    <div class="face right">3</div>
-                    <div class="face left">4</div>
-                    <div class="face top">5</div>
-                    <div class="face bottom">6</div>
-                </div> -->
+        
+            <div id="diceContainer" class="diceContainer"> </div>  
+                <div class="cube" id="cube" style="display: none;">
+                    <div class="face front"><div class="dot dot-center"></div></div>
+                    
+                    <div class="face back">
+                        <div class="dot dot-top-left"></div>
+                        <div class="dot dot-bottom-right"></div>
+                    </div>
+                    
+                    <div class="face right">
+                        <div class="dot dot-top-left"></div>
+                        <div class="dot dot-center"></div>
+                        <div class="dot dot-bottom-right"></div>
+                    </div>
+                    
+                    <div class="face left">
+                        <div class="dot dot-top-left"></div>
+                        <div class="dot dot-top-right"></div>
+                        <div class="dot dot-bottom-left"></div>
+                        <div class="dot dot-bottom-right"></div>
+                    </div>
+
+                    <div class="face top">
+                        <div class="dot dot-top-left"></div>
+                        <div class="dot dot-top-right"></div>
+                        <div class="dot dot-center"></div>
+                        <div class="dot dot-bottom-left"></div>
+                        <div class="dot dot-bottom-right"></div>
+                    </div>
+                    
+                    <div class="face bottom">
+                        <div class="dot dot-top-left"></div>
+                        <div class="dot dot-top-right"></div>
+                        <div class="dot dot-center-left"></div>
+                        <div class="dot dot-center-right"></div>
+                        <div class="dot dot-bottom-left"></div>
+                        <div class="dot dot-bottom-right"></div>
+                    </div>
                 
-        <button class="botonDado" id="diceButton">Rotate</button>
+                </div>
+            <div class="part2">  
+                <button class="botonDado" id="diceButton">Rotate</button>
 
-        <h2>Select Number of dices</h2>
-        <select id="diceCount">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+                <div class="TheCount"> 
+                    <h2>Select Number of dices</h2>
+                    <select id="diceCount">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+            
+                    </select>
+                </div>
 
-        </select>
-        <div id="quoteBox">Click to get a quote</div>
+            </div>
+
+        <!-- <div id="quoteBox">Click to get a quote</div> -->
     
-        </div>
+        
     </main>
     
     <footer id="main-footer"></footer>
