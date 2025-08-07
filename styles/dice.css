@@ -68,15 +68,15 @@ footer {
 /* DICE */
 
 .diceContainer{
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    /* padding: 20px; */
     gap: 20px;
-    width: 200px;
+    /* width: 200px;
     height: 200px;
     margin: 40px auto;
-    perspective: 600px;
+    perspective: 600px; */
 }
 
 .cube{
