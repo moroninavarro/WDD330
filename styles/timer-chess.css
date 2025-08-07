@@ -1,4 +1,8 @@
-
+*{
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 header{
     display: flex;
     justify-content: left;
@@ -15,11 +19,8 @@ body{
    
 }
 #timer1, #timer2{
-    font-size: 3rem;
+    font-size: 2rem;
     white-space: nowrap;
-    
-
-    
 }
 select{
     padding: 10px;
@@ -68,7 +69,7 @@ footer {
     align-items: center;
     font-size: 25px;
     padding: 1em;
-    margin-top: 10rem;
+    margin-top: 2rem;
 }
 
 @media screen and (max-width: 760px) {

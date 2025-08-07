@@ -1,4 +1,8 @@
-
+*{
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 header{
     display: flex;
     justify-content: left;
@@ -48,10 +52,16 @@ footer {
     align-items: center;
     font-size: 25px;
     padding: 1em;
-    margin-top: 10rem;
+    margin-top: -2rem;
+    
 }
 
-@media screen and (max-width: 960px) {
+#art img{
+    max-width: 90%;
+    height: auto;
+}
+
+@media screen and (max-width: 1060px) {
    .logicTimer{
     display: grid;
     justify-content: center;
