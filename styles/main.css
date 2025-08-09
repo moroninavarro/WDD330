@@ -16,11 +16,8 @@ main{
 .games{
     display: flex;
     padding: 5px;
-    margin: 10px;
     justify-content: center;
-}
-.games-list{
-    display: flex;
+    margin: 50px auto 0 auto;
 }
 
 footer {
@@ -28,7 +25,6 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 25px;
-    padding: 1em;
     margin-top: 4rem;
 }
 
@@ -59,10 +55,7 @@ img{
 }
 
 @media screen and (max-width: 960px) {
-    .games-list{
-    display: grid;
-   
-}
+
 img{
     height: 11rem;
     width: 11rem;
@@ -71,7 +64,11 @@ img{
 footer {
     margin-top: 5px;
     text-align: center;
-    
+}
+
+.games{
+    display: grid;
     
 }
+
 }
