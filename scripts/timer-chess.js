@@ -93,6 +93,7 @@ button1.addEventListener('click', () => {
         button2.classList.add('active-turn');
         button1.classList.remove('active-turn');
         soundmp3.play();
+        showAdvice();
     }
 });
 
@@ -102,6 +103,25 @@ button2.addEventListener('click', () => {
         button1.classList.add('active-turn');
         button2.classList.remove('active-turn');
         soundmp3.play();
+        showAdvice();
     }
 });
 
+
+
+
+async function showAdvice(){
+    try{
+        const res = await fetch ('https://api.adviceslip.com/advice');
+        const data = await res.json();
+        const advice = data.slip.advice;
+        
+        document.getElementById("advice").innerHTML = `
+        <p>A life tip for you: <em>"${advice}"</em></p>
+        
+        `;
+    } catch (err) {
+        console.error("Error to get the obra:", err);
+        document.getElementById("art").textContent = "No se cargo la obra de arte";
+    }
+}
