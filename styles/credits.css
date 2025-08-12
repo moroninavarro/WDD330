@@ -24,3 +24,20 @@ button{
 button:hover{
     background-color: rgb(201, 201, 16);
 }
+legend{
+    animation-duration: 3.5s;
+    animation-name: slidein;
+
+}
+
+@keyframes slidein{
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
