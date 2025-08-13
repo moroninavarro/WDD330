@@ -57,12 +57,34 @@
     <footer id="main-footer"></footer>
     <script src="scripts/main.js" type="module"></script>
         <script>
-            if (localStorage.getItem("ThisPersonEntered")){
-                document.getElementById("message").textContent = "Welcome Back To";
-            } else {
-                document.getElementById("message").textContent = "Welcome To";
-                localStorage.setItem("ThisPersonEntered", "true");
-            }
+           let userData = JSON.parse(localStorage.getItem("sitePreferences"));
+
+           if (!userData){
+            userData = {
+                ThisPersonEntered: true,
+                username:prompt("What is your name?") || "Guest",
+                theme: "dark",
+                language: "es",
+                lastVisit: new Date().toISOString()
+            };
+
+
+            localStorage.setItem("sitePreferences", JSON.stringify(userData));
+            document.getElementById("message").textContent = `Welcome, ${userData.username}!`;
+           } else {
+            userData.lastVisit = new Date().toISOString();
+            localStorage.setItem("sitePreferences", JSON.stringify(userData));
+
+            let hello = userData.language === "eng" ? "Welcome back" : "Welcome back";
+            document.getElementById("message").textContent = `${hello}, ${userData.username}!`;
+
+           }
+
+           if (userData.theme === "dark"){
+            document.body.syle.color = "white";
+           } else {
+            document.body.syle.color = "white";
+           }
 
         </script>
 </body>
