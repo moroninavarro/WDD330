@@ -14,7 +14,7 @@ main{
 }
 
 h1, h2, footer{
-    animation-duration: 2.5s;
+    animation-duration: 1.5s;
     animation-name: slidein;
 }
 .footer-link{
