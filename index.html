@@ -15,7 +15,9 @@
 <body>
     <header class="divider" id="main-header"></header>
     <main class="divider">
-        <h1>Welcome to The Random Numbers Generator</h1>
+        <h2 id="message"></h2>
+        
+        <h2>The Random Numbers Generator</h2>
         <h2>Select an option to Continue</h2>
         <a href="credits.html" class="footer-link">Credits</a>
         
@@ -43,5 +45,14 @@
     </main>
     <footer id="main-footer"></footer>
     <script src="scripts/main.js" type="module"></script>
+        <script>
+            if (localStorage.getItem("ThisPersonEntered")){
+                document.getElementById("message").textContent = "Welcome Back To";
+            } else {
+                document.getElementById("message").textContent = "Welcome To";
+                localStorage.setItem("ThisPersonEntered", "true");
+            }
+
+        </script>
 </body>
 </html>
