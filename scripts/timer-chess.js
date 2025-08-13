@@ -120,7 +120,7 @@ async function showAdvice(){
         
         `;
     } catch (err) {
-        console.error("Error to get the obra:", err);
-        document.getElementById("advice").textContent = "No se cargo la obra de arte";
+        console.error("Error to get the advice:", err);
+        document.getElementById("advice").textContent = "Error to get the advice";
     }
 }
