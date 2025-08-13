@@ -1,7 +1,4 @@
-
-// const cube = document.getElementById('cube');
 const button = document.getElementById('diceButton');
-const quoteBox = document.getElementById('quoteBox');
 const diceCountSelect = document.getElementById('diceCount');
 const diceContainer = document.getElementById('diceContainer');
 

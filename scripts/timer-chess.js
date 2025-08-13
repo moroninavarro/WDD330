@@ -1,5 +1,4 @@
 const buttonStart = document.getElementById('StartBtn');
-const quoteBox = document.getElementById('quoteBox');
 const timer1Display = document.getElementById('timer1');
 const timer2Display = document.getElementById('timer2');
 const button1 = document.getElementById('btn1');
@@ -122,6 +121,6 @@ async function showAdvice(){
         `;
     } catch (err) {
         console.error("Error to get the obra:", err);
-        document.getElementById("art").textContent = "No se cargo la obra de arte";
+        document.getElementById("advice").textContent = "No se cargo la obra de arte";
     }
 }
